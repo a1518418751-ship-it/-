@@ -30,10 +30,10 @@ for t in range(0,years+1):
     total_input = initial_capital+loan_amount*loan_rate*t
     data.append({"年份":t,"净资产":net_equity,"累计投入":total_input})
 
-df = pd.DATAFRAME(data)
+df = pd.DataFrame(data)
 
 #4.使用plotly绘制图表
-fig = go.FIGURE()
+fig = go.Figure()
 
 #添加净资产面积图
 fig.add_trace(go.scatter(x=df["年份"],y=df["净资产"],mode="lines",
