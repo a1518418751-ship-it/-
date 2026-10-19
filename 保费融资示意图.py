@@ -36,7 +36,7 @@ df = pd.DataFrame(data)
 fig = go.Figure()
 
 #添加净资产面积图
-fig.add_trace(go.scatter(x=df["年份"],y=df["净资产"],mode="lines",
+fig.add_trace(go.Scatter(x=df["年份"],y=df["净资产"],mode="lines",
                          name = "净资产（保单现金价值-贷款数）",
                          line = dict(width=3,color='#1f77b4'),fill="tozeroy"))
 
