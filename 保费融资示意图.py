@@ -28,7 +28,7 @@ for t in range(0,years+1):
     net_equity= actual_initial_policy_value*((1+policy_yield)**t)-loan_amount
     #累计投入 = 首付本金+累计利息
     total_input = initial_capital+loan_amount*loan_rate*t
-    data.append{"年份":t,"净资产":net_equity,"累计投入":total_input}
+    data.append({"年份":t,"净资产":net_equity,"累计投入":total_input})
 
 df = pd.DATAFRAME(data)
 
