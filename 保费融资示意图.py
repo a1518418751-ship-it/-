@@ -41,7 +41,7 @@ fig.add_trace(go.Scatter(x=df["年份"],y=df["净资产"],mode="lines",
                          line = dict(width=3,color='#1f77b4'),fill="tozeroy"))
 
 #添加累计投入虚线图
-fig.add_trace(go.scatter(x=df["年份"],y=df["累计投入"],mode="lines",
+fig.add_trace(go.Scatter(x=df["年份"],y=df["累计投入"],mode="lines",
                          name = "累计投入（首付+已付利息）",
                          line = dict(width=3, color='#ff7f0e', dash='dash')))
 
