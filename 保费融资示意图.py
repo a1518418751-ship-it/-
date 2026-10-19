@@ -64,7 +64,7 @@ col1.metric("期末净资产",f"${final_equity:,.0f}")
 col2.metric("期末净投入",f"${final_input:,.0f}")
 col3.metric("最终净利润",f"${net_profit:,.0f}",delta = f"${net_profit:,.0f}")
 
-st.capital("*模型假设每年利息以现金支付。当每年投入本金大于净资产曲线时，即出现倒贴本金")
+st.caption("*模型假设每年利息以现金支付。当每年投入本金大于净资产曲线时，即出现倒贴本金")
 
 
 
