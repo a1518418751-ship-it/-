@@ -46,8 +46,8 @@ fig.add_trace(go.Scatter(x=df["年份"],y=df["累计投入"],mode="lines",
                          line = dict(width=3, color='#ff7f0e', dash='dash')))
 
 fig.update_layout(
-    xaxis_tital = "保单持有年份",
-    yaxis_tital = "金额",
+    xaxis_title = "保单持有年份",
+    yaxis_title = "金额",
     hovermode = "x unified",
     legend = dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
 )
