@@ -23,7 +23,7 @@ total_premium = initial_capital+loan_amount
 actual_initial_policy_value=total_premium*0.80
 
 data = []
-for t in range(0,years+1)：
+for t in range(0,years+1):
     #净资产 = 首日现金价值*（1+保单回报率）^t-贷款本金
     net_equity= actual_initial_policy_value*((1+policy_yield)**t)-loan_amount
     #累计投入 = 首付本金+累计利息
