@@ -9,13 +9,13 @@ st.markdown("你可以通过调整下方参数，分析在不同资金，不同�
 
 #2.侧边栏：客户的基本参数
 st.sidebar.header("调整利率和资金")
-initial_capital=st.sidebar.slider("首付本金(自有资金,$)",50000,100000,150000,200000,250000,300000,step=10000)
-loan_amount=st.sidebar.slider("银行融资贷款金额($)",100000,500000,1000000,1500000,2000000,step=50000)
-policy_yield=st.sidebar.slider("保单预期年回报(%)",2,3,4,5,6,7,8,9,10,step=0.1)/100
+initial_capital=st.sidebar.slider("首付本金(自有资金,$)",50000,300000,200000,step=10000)
+loan_amount=st.sidebar.slider("银行融资贷款金额($)",100000,2000000,1000000,step=50000)
+policy_yield=st.sidebar.slider("保单预期年回报(%)",2,10,5,step=0.1)/100
 
 st.sidebar.markdown("--------")
-loan_rate=st.sidebar.slider("实际贷款利率(%)",1,2,3,4,5,6,step=0.1)/100
-years=st.sidebar.slider("保单持有年期",3,5,8,10,15,step=1)
+loan_rate=st.sidebar.slider("实际贷款利率(%)",1,6,3,step=0.1)/100
+years=st.sidebar.slider("保单持有年期",3,15,10,step=1)
 
 #3.核心计算逻辑
 total_premium = initial_capital+loan_amount
