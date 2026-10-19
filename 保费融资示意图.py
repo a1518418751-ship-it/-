@@ -11,10 +11,10 @@ st.markdown("你可以通过调整下方参数，分析在不同资金，不同�
 st.sidebar.header("调整利率和资金")
 initial_capital=st.sidebar.slider("首付本金(自有资金,$)",50000,300000,200000,step=10000)
 loan_amount=st.sidebar.slider("银行融资贷款金额($)",100000,2000000,1000000,step=50000)
-policy_yield=st.sidebar.slider("保单预期年回报(%)",2,10,5,step=0.1)/100
+policy_yield=st.sidebar.slider("保单预期年回报(%)",2.0,10.0,5.0,step=0.1)/100
 
 st.sidebar.markdown("--------")
-loan_rate=st.sidebar.slider("实际贷款利率(%)",1,6,3,step=0.1)/100
+loan_rate=st.sidebar.slider("实际贷款利率(%)",1.0,6.0,3.0,step=0.1)/100
 years=st.sidebar.slider("保单持有年期",3,15,10,step=1)
 
 #3.核心计算逻辑
