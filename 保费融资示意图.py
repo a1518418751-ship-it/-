@@ -15,7 +15,7 @@ policy_yield=st.sidebar.slider("保单预期年回报(%)",2.0,10.0,5.0,step=0.1)
 
 st.sidebar.markdown("--------")
 loan_rate=st.sidebar.slider("实际贷款利率(%)",1.0,6.0,3.0,step=0.1)/100
-years=st.sidebar.slider("保单持有年期",3,15,10,step=1)
+years=st.sidebar.slider("保单持有年期",3.0,10.0,5.0,step=0.1)
 
 #3.核心计算逻辑
 total_premium = initial_capital+loan_amount
