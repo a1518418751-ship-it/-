@@ -15,7 +15,7 @@ policy_yield=st.sidebar.slider("保单预期年回报(%)",2.0,10.0,5.0,step=0.1)
 
 st.sidebar.markdown("--------")
 loan_rate=st.sidebar.slider("实际贷款利率(%)",1.0,6.0,3.0,step=0.1)/100
-years=st.sidebar.slider("保单持有年期",3.0,10.0,5.0,step=0.1)
+years=st.sidebar.slider("保单持有年期",3,10,5,step=1)
 
 #3.核心计算逻辑
 total_premium = initial_capital+loan_amount
@@ -23,7 +23,7 @@ total_premium = initial_capital+loan_amount
 actual_initial_policy_value=total_premium*0.80
 
 data = []
-for t in range(0,years+0.1):
+for t in range(0,years+1):
     #净资产 = 首日现金价值*（1+保单回报率）^t-贷款本金
     net_equity= actual_initial_policy_value*((1+policy_yield)**t)-loan_amount
     #累计投入 = 首付本金+累计利息
